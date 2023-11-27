@@ -90,6 +90,18 @@ It will contain a lot of general purpose functions your programs will rely upon.
 - `ft_strmapi.c`: Apply a function to each character of a string.
 - `ft_striteri.c`: Apply a function to each character of a string with its index.
 
+### Linked List Functions
+
+- `ft_lstnew.c`: Create a new list node.
+- `ft_lstadd_front.c`: Add a new node to the beginning of the list.
+- `ft_lstsize.c`: Count the number of elements in a list.
+- `ft_lstlast.c`: Return the last element of a list.
+- `ft_lstadd_back.c`: Add a new node to the end of the list.
+- `ft_lstdelone.c`: Delete a node from the list without deleting its content.
+- `ft_lstclear.c`: Delete the entire list.
+- `ft_lstiter.c`: Apply a function to each element of the list.
+- `ft_lstmap.c`: Create a new list resulting from applying a function to each element of the original list.
+
 ## Getting Started
 
 To get started with Libft, follow these steps:
