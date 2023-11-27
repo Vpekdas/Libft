@@ -31,6 +31,7 @@ Set sail with me, ye code pirates, as we plunder the bits and bytes of programmi
   - [Character Classification Functions](#character-classification-functions)
   - [Output Functions](#output-functions)
   - [String Handling Functions](#string-handling-functions)
+  - [Linked List Functions](#Linked-List-Functions)
 - [Getting Started](#getting-started)
 - [License](#license)
 
