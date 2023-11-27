@@ -98,7 +98,7 @@ To get started with Libft, follow these steps:
 
 Before you begin, ensure you have the following prerequisites installed:
 
-- [CC](#) (Your C Compiler, for example, Clang)
+- [CC](#) (Your C Compiler, for example, [Clang](https://clang.llvm.org/))
 - [Make](https://www.gnu.org/software/make/)
 
 ### Installation
