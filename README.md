@@ -35,7 +35,6 @@ Set sail with me, ye code pirates, as we plunder the bits and bytes of programmi
 - [Getting Started](#getting-started)
 - [License](#license)
 
-
 ## Overview
 
 This project is about coding a C library.
