@@ -27,7 +27,7 @@ Before you begin, ensure you have met the following requirements:
 git clone https://github.com/Vpekdas/Libft.git
 ```
 
-2. **Install a C compiler**: If you don't already have a C compiler installed, you will need one to build and use this library. You can install the Clang compiler.
+2. **Install a C compiler**: If you don't already have a C compiler installed, you will need one to build and use this library. You can install the [Clang compiler](https://clang.llvm.org).
    
 - On a Mac, you should already have Clang installed as part of Xcode Command Line Tools. You can confirm this by running clang --version in your terminal. If it's not installed, you'll be prompted to install it.
 
