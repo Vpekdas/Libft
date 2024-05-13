@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:40:36 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:04:39 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:12:38 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	src_len;
 
+	if (!dst || !src)
+		return (print_error_int(STR_NULL_ERROR));
 	dest_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;

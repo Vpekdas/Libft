@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:42:55 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:05:54 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:14:39 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 	char	ch;
 
+	if (!s)
+		return (print_error_char(STR_NULL_ERROR));
 	i = ft_strlen(s) - 1;
 	ch = (char) c;
 	while (i >= 0)

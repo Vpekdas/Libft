@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:32:53 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:06:53 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:36:52 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	ptr = malloc(size * nmemb);
 	if (!ptr)
-		return (NULL);
+		return (print_error_char(MALLOC_ERROR));
 	ft_memset(ptr, '\0', nmemb * size);
 	return (ptr);
 }

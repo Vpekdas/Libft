@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:42:12 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:05:21 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:13:53 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_strncmp(char const *s1, char const *s2, size_t n)
 {
 	if (n == 0)
 		return (0);
+	if (!s1 || !s2)
+		return (print_error_int(STR_NULL_ERROR));
 	while (*s1 && *s2 && *s1 == *s2 && n > 1)
 	{
 		s1++;

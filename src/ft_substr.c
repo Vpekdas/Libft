@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:44:35 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:06:17 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:15:51 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	if (!s)
-		return (NULL);
+		return (print_error_char(STR_NULL_ERROR));
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (ft_strdup(""));
@@ -31,7 +31,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		len = s_len - start;
 	ptr = malloc(len + 1);
 	if (!ptr)
-		return (NULL);
+		return (print_error_char(MALLOC_ERROR));
 	while (i < len)
 	{
 		ptr[i] = s[start + i];

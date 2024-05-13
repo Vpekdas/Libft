@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:41:01 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:04:52 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:12:56 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
+	if (!dst || !src)
+		return (print_error_int(STR_NULL_ERROR));
 	while (src[i])
 	{
 		if ((i < size - 1 && size != 0))

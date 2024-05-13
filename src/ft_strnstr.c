@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:42:16 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:05:41 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:14:21 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!haystack || !needle)
+		return (print_error_char(STR_NULL_ERROR));
 	i = 0;
 	j = 0;
 	if (needle[0] == '\0')

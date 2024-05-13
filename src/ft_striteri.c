@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:38:52 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:04:00 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:11:50 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	if (!s || !f)
-		return ;
+		return (print_error_void(STR_NULL_ERROR));
 	while (s[i])
 	{
 		f(i, &s[i]);

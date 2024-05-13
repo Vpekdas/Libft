@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:38:33 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:01:11 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:18:16 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstnew(void *content)
 
 	new_node = malloc(sizeof(t_list));
 	if (!new_node)
-		return (NULL);
+		return ((t_list *)(print_error_char(MALLOC_ERROR)));
 	new_node->content = content;
 	new_node->next = NULL;
 	return (new_node);

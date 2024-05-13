@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:25:45 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 01:59:12 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:10:44 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,31 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdint.h>
+
+// ---------------------------------------------------------------------------//
+//	+	+	+	+	+	+	+	// COLORS //	+	+	+	+	+	+	+ 	+ //
+// ---------------------------------------------------------------------------//
+
+# define YELLOW "\033[0;33m"
+# define ORANGE "\033[38;5;208m"
+# define GREEN	"\033[0;32m"
+# define BLUE	"\033[0;34m"
+# define RED	"\033[0;31m"
+# define PURPLE	"\033[0;35m"
+# define CYAN	"\033[0;36m"
+# define BLACK	"\033[0;30"
+# define WHITE	"\033[0;37m"
+# define NC		"\033[0m"
+
+// ---------------------------------------------------------------------------//
+//	+	+	+	+	+	+	+	// MACROS //	+	+	+	+	+	+	+ 	+ //
+// ---------------------------------------------------------------------------//
+
+# define ERROR -1
+# define STR_NULL_ERROR "❌str pointer is null❌\n"
+# define INT_NULL_ERROR "❌int pointer is null❌\n"
+# define MALLOC_ERROR "❌ Error: Memory allocation failed ❌\n"
+# define WRITE_ERROR "❌ Error encountered during write operation ❌\n"
 
 // ---------------------------------------------------------------------------//
 //	+	+	+	+	+	+	+	// STRUCTURE //	+	+	+	+	+	+	+ 	+ //
@@ -91,6 +116,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+int		print_error_int(char *error_message);
+void	print_error_void(char *error_message);
+char	*print_error_char(char *error_message);
 
 //############################################################################//
 						// String Splitting Function //

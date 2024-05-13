@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:10:48 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:03:17 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:21:17 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 #include "../include/libft.h"
 
-void	*ft_free(char **tab)
+static void	*ft_free(char **tab)
 {
 	int	i;
 
 	i = 0;
+	if (!tab)
+		return (NULL);
 	while (tab[i])
 	{
 		free(tab[i]);
@@ -34,6 +36,8 @@ static char	*ft_strcpy(char *dest, const char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
+	if (!dest || !src)
+		return (print_error_char(STR_NULL_ERROR));
 	while (src[i] && i < n)
 	{
 		dest[i] = src[i];
@@ -49,7 +53,7 @@ static int	ft_count_words(const char *str, char c)
 
 	count = 0;
 	if (!str)
-		return (0);
+		return (print_error_int(STR_NULL_ERROR));
 	while (*str)
 	{
 		while (*str == c)
@@ -68,6 +72,10 @@ static char	*ft_copy_words(const char *str, char sep, int *length)
 	const char	*start;
 	char		*ptr;
 
+	if (!str)
+		return (print_error_char(STR_NULL_ERROR));
+	if (!length)
+		print_error_char(INT_NULL_ERROR);
 	start = str;
 	while (*str && *str != sep)
 		str++;
@@ -88,10 +96,10 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	if (!s)
-		return (NULL);
+		return ((char **)(print_error_char(STR_NULL_ERROR)));
 	result = ft_calloc(sizeof(char *), (ft_count_words(s, c) + 1));
 	if (!result)
-		return (NULL);
+		return ((char **)(print_error_char(MALLOC_ERROR)));
 	while (*s)
 	{
 		len = 0;

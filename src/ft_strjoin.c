@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:39:07 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 02:04:22 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:18:53 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static char	*ft_strcat(char *dest, char const *src)
 	int	len;
 
 	i = 0;
+	if (!dest || !src)
+		return (print_error_char(STR_NULL_ERROR));
 	len = ft_strlen(dest);
 	while (src[i])
 	{
@@ -42,7 +44,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	ptr = malloc(len);
 	if (!ptr)
-		return (NULL);
+		return (print_error_char(MALLOC_ERROR));
 	ft_memset(ptr, '\0', len);
 	ft_strcat(ptr, s1);
 	ft_strcat(ptr, s2);
