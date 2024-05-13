@@ -6,9 +6,10 @@
 3. [Usage Instructions](#usage-instructions)
 4. [Key Functions](#key-functions)
 5. [Contribution Guidelines](#contribution-guidelines)
-6. [License Information](#license-information)
-7. [Contact Information](#contact-information)
-8. [Project Development](#project-development)
+6. [Acknowledgments](#acknowledgments)
+7. [License Information](#license-information)
+8. [Contact Information](#contact-information)
+9. [Project Development](#project-development)
 
 ## Description
 
@@ -107,6 +108,16 @@ ft_lstadd_back(&list, ft_lstnew("world!"));
 int size = ft_lstsize(list);
 printf("%d\n", size);  // Outputs: 2
 ```
+
+## Acknowledgments
+
+I would like to express my deepest appreciation to all those who provided the possibility to complete this project. A special gratitude I give to the contributors of the following tester programs:
+
+* [libftTester by Tripouille](https://github.com/Tripouille/libftTester)
+* [libft-unit-test by alelievr](https://github.com/alelievr/libft-unit-test)
+* [libft-war-machine by 0x050f](https://github.com/0x050f/libft-war-machine)
+
+These tester programs were instrumental in the development process. They not only helped me identify and correct errors quickly, but also introduced me to new testing methodologies and considerations I hadn't previously encountered. Their insights and expertise contributed significantly to the completion of this project.
 
 ## Contribution Guidelines
 
