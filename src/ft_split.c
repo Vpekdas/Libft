@@ -6,7 +6,7 @@
 /*   By: inf1n1ty <inf1n1ty@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:10:48 by vopekdas          #+#    #+#             */
-/*   Updated: 2024/05/13 03:21:17 by inf1n1ty         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:46:24 by inf1n1ty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ static void	*ft_free(char **tab)
 
 	i = 0;
 	if (!tab)
-		return (NULL);
+		return (print_error_char(STR_NULL_ERROR));
 	while (tab[i])
 	{
 		free(tab[i]);
+		tab[i] = NULL;
 		i++;
 	}
 	free(tab);
@@ -83,7 +84,7 @@ static char	*ft_copy_words(const char *str, char sep, int *length)
 	*length = len;
 	ptr = malloc(sizeof(char) * len + 1);
 	if (!ptr)
-		return (NULL);
+		return (print_error_char(MALLOC_ERROR));
 	ft_strcpy(ptr, start, len);
 	return (ptr);
 }
