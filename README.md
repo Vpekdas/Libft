@@ -53,11 +53,11 @@ clang your_program.c -LLibft -lft -o your_project_name
 Here are some of the key functions provided by this library:
 
 - `ft_atoi(const char *str)`: Converts the initial portion of the string pointed to by `str` to `int` representation.
-  ```c
-  char *str = "123";
-  int num = ft_atoi(str);
-  printf("%d\n", num);  // Outputs: 123
-  ```
+```c
+char *str = "123";
+int num = ft_atoi(str);
+printf("%d\n", num);  // Outputs: 123
+```
 
 - `ft_calloc(size_t count, size_t size)`: Allocates memory for an array of count elements, each of them size bytes long, and initializes all its bits to zero.
 ```c
