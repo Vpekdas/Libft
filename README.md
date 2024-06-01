@@ -1,4 +1,4 @@
-# Libft - Your very first own library
+# Libft
 
 # Table of Contents
 1. [Description](#description)
