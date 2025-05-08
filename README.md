@@ -60,7 +60,7 @@ This will generate the `libft.a` static library, which you can then include in y
 #include "../includes/libft.h"
 ```
 
-3. **Compile your own project with the library**: Link the ft_printf library when compiling your project:
+3. **Compile your own project with the library**: Link the libft library when compiling your project:
 ```bash
 clang your_source.c -L/path/to/library -lft -o your_project_name
 ```
